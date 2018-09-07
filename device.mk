@@ -214,6 +214,42 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service 
 
+#bootfix
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/libbfqio_vendor.so:vendor/lib/libbfqio_vendor.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/libsd_sdk_display.so:vendor/lib/libsd_sdk_display.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/libsdm-color.so:vendor/lib/libsdm-color.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/libsdmcore.so:vendor/lib/libsdmcore.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/libsdm-diag.so:vendor/lib/libsdm-diag.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/libsdm-disp-vndapis.so:vendor/lib/libsdm-disp-vndapis.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/libsdmextension.so:vendor/lib/libsdmextension.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/libsdmutils.so:vendor/lib/libsdmutils.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/vendor.display.color@1.0_vendor.so:vendor/lib/vendor.display.color@1.0_vendor.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/vendor.display.config@1.0_vendor.so:vendor/lib/vendor.display.config@1.0_vendor.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/vendor.display.config@1.1_vendor.so:vendor/lib/vendor.display.config@1.1_vendor.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/vendor.display.postproc@1.0_vendor.so:vendor/lib/vendor.display.postproc@1.0_vendor.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/hw/android.hardware.graphics.allocator@2.0-impl.so:vendor/lib/hw/android.hardware.graphics.allocator@2.0-impl.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/hw/android.hardware.graphics.composer@2.1-impl.so:vendor/lib/hw/android.hardware.graphics.composer@2.1-impl.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl.so:vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib/hw/hwcomposer.msm8937.so:vendor/lib/hw/hwcomposer.msm8937.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/libbfqio_vendor.so:vendor/lib64/libbfqio_vendor.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/libsd_sdk_display.so:vendor/lib64/libsd_sdk_display.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/libsdm-color.so:vendor/lib64/libsdm-color.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/libsdmcore.so:vendor/lib64/libsdmcore.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/libsdm-diag.so:vendor/lib64/libsdm-diag.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/libsdm-disp-vndapis.so:vendor/lib64/libsdm-disp-vndapis.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/libsdmextension.so:vendor/lib64/libsdmextension.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/libsdmutils.so:vendor/lib64/libsdmutils.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/vendor.display.color@1.0_vendor.so:vendor/lib64/vendor.display.color@1.0_vendor.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/vendor.display.config@1.0_vendor.so:vendor/lib64/vendor.display.config@1.0_vendor.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/vendor.display.config@1.1_vendor.so:vendor/lib64/vendor.display.config@1.1_vendor.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/vendor.display.postproc@1.0_vendor.so:vendor/lib64/vendor.display.postproc@1.0_vendor.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/hw/android.hardware.graphics.allocator@2.0-impl.so:vendor/lib64/hw/android.hardware.graphics.allocator@2.0-impl.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/hw/android.hardware.graphics.composer@2.1-impl.so:vendor/lib64/hw/android.hardware.graphics.composer@2.1-impl.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so:vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so \
+    $(LOCAL_PATH)/prebuilds/vendor/lib64/hw/hwcomposer.msm8937.so:vendor/lib64/hw/hwcomposer.msm8937.so
+
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
