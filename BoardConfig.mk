@@ -193,8 +193,8 @@ $(shell rm -rf hardware/qcom/display-caf/msm8996/liblight)
 TARGET_PROVIDES_KEYMASTER := true
 
 # Lineage Hardware
-BOARD_HARDWARE_CLASS += \
-    $(DEVICE_PATH)/lineagehw
+#BOARD_HARDWARE_CLASS += \
+#    $(DEVICE_PATH)/lineagehw
 
 # Tap2Wake
 TARGET_TAP_TO_WAKE_NODE := "/proc/gesture/onoff"
