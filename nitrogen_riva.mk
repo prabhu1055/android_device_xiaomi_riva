@@ -14,18 +14,26 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/xiaomi/riva/full_riva.mk)
+DEVICE_PATH := device/xiaomi/riva
 
-# Inherit some common LineageOS stuff.
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# Inherit some common NitrogenOS stuff.
 $(call inherit-product, vendor/nitrogen/products/common.mk)
 
-PRODUCT_DEVICE := riva
+# Inherit from riva device
+$(call inherit-product, $(DEVICE_PATH)/device.mk)
+
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi 5A
+PRODUCT_DEVICE := riva
+PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_NAME := nitrogen_riva
-BOARD_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+TARGET_VENDOR_PRODUCT_NAME := riva
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="riva-user 7.1.2 N2G47H V9.5.6.0.NCKMIFA release-keys"
@@ -33,3 +41,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Set BUILD_FINGERPRINT variable
 BUILD_FINGERPRINT := "Xiaomi/riva/riva:7.1.2/N2G47H/V9.5.6.0.NCKMIFA:user/release-keys"
 
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
+    ro.product.model
