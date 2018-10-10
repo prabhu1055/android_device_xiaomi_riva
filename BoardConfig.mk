@@ -186,9 +186,6 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_riva
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
 
-# Lineage Hardware
-JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
-
 # Tap2Wake
 TARGET_TAP_TO_WAKE_NODE := "/proc/gesture/onoff"
 
@@ -223,9 +220,6 @@ TARGET_RIL_VARIANT := caf
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
-
-# Security patch level
-VENDOR_SECURITY_PATCH := 2018-09-01
 
 # SELinux
 #include device/qcom/sepolicy/sepolicy.mk
