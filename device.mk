@@ -148,6 +148,7 @@ PRODUCT_PACKAGES += \
     camera.msm8937 \
     libmm-qcamera \
     libshim_camera \
+    FootejCamera \
     Camera2
 
 PRODUCT_PACKAGES += \
